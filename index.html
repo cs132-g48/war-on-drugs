@@ -53,7 +53,7 @@
 				<div class="container">
 					<header>
 						<h2>Here's an overview of our project.</h2>
-						<p>Former president Rodrigo Duterte's infamous <b>War on Drugs</b> is a source of great controversy, and as a result, the strong subject of internet traffic. However, this traffic is not evenly distributed: <a href="https://trends.google.com/trends/explore?date=2016-01-01%202022-12-31&geo=PH&q=war%20on%20drugs&hl=en">Google Trends</a> data shows that Philippine search queries involving the keywords "War on Drugs" peaked around the middle of 2017—Kian delos Santos's death.</p>
+						<p>Former president Rodrigo Duterte's infamous <b>War on Drugs</b> is a source of great controversy, and as a result, the strong subject of internet traffic. However, this traffic is not evenly distributed: <a href="https://trends.google.com/trends/explore?date=2016-01-01%202022-12-31&geo=PH&q=war%20on%20drugs&hl=en">Google Trends</a> data shows that Philippine search queries involving the keywords "War on Drugs" peaked around the middle of 2017—<b>Kian delos Santos's death.</b></p>
 						<p><br><i>Did this significant peak of online traffic towards the war on drugs also cause a rise in fake news tweets?</i></p>
 					</header>
 					<div class="row aln-center">
@@ -158,11 +158,81 @@
 						<p>What did we find upon exploring our data?</p>
 					</header>
 					<div class="row">
+						<div class="col-6 col-6-medium col-12-small">
+							<h2>Data Preprocessing</h2>
+							<article class="box style2">
+								<!--<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>-->
+								<h3>How did we ensure that there were no missing values?</h3><br>
+								<p>All the relevant information taken from a <b><u>War on Drugs mis/disinformation tweet</u></b> is acquired from data collection: this includes the <b><i>Tweet content</i></b> (allowing us to review the Tweet for data collection), <b><i>account handle</i></b>, <b><i>Tweet URL</i></b> (as proof the Tweet existed at some point in data collection), and <b><i>date posted</i></b>.</p>
+								<p>The dataset was also quickly checked after data collection through Python to guarantee that none of the tweets have missing values for any of the necessary information. This can be seen in the Python Notebook below.</p>
+								<hr>
+								<h3>How did we handle outliers?</h3><br>
+								<p>In a time-series analysis, outliers are generally referred to as extremely high values. As our research question involves checking peaks in tweet frequency, it is important to keep high frequencies in our data set.</p>
+								<p>Outliers can also exist by being outside of the time period under study (in our case, from 2016 to 2022), which can be checked through python by finding the minimum and maximum values of the date posted. No outliers were found through this step.</p>
+								<hr>
+								<h3>How did we ensure format consistency?</h3><br>
+								<p>Tweets are reviewed by hand by us researchers. Aside from human review, python was used to ensure string consistency (for example, dates can be guaranteed to be formatted as <number><number><slash><number><number>), as well as low level checking for dates and months (for example, months should not go beyond 12). Both python and human review ensure formatting is what it needs to be.</p>
+								<hr>
+								<h3>Did we normalize/standardize/scale our data?</h3><br>
+								<p>As this study tackles only one variable (time of tweet), there is no need to normalize or scale.</p>
+								<hr>
+								<h3>How did we categorically encode our data?</h3><br>
+								<p>While this study tackles numerical data in dates, some relevant information is still categorial. For anonymity, account handles have been assigned a unique ID number per account through pandas, which will be used for extraneous analysis. Each individual tweet is also assigned a unique ID during collection for anonymous reference during analysis. </p>
+								<hr>
+								<h3><i>Time Series Analysis</i></h3><br>
+								<h3>How did we perform interpolation on our data?</h3><br>
+								<p></p>
+								<hr>
+								<h3>How did we perform binning on our data?</h3><br>
+								<p></p>
+							</article>
+						</div>
+
+
+						<div class="col-6 col-6-medium col-12-small">
+							
+							<article class="box style2">
+								<h2>Other Characteristics</h2>
+								<h3>What is the size/shape of the dataset?</h3><br>
+								<p>After preprocessing, but before feature generation, the dataset has <b>60 Tweets</b> (rows) and <b>25 features</b> (columns). Features can be increased as needed for further analysis.</p>
+								<hr>
+								<h3>How many unique accounts are in the dataset?</h3><br>
+								<p>The 60 tweets collected come from <b>51 unique accounts</b>.</p>
+								<hr>
+								<h3>What is the range of the dates posted?</h3><br>
+								<p>Tweets collected range from <b>February 2016</b> to <b>June 2022</b>.</p>
+								<hr>
+								<h3>How does the data compare to historical events?</h3><br>
+								<p>The point of the study is to check if a specific event caused the peak of War on Drugs related mis/disinformation, so this question will be tackled in greater depth later in the research process.</p>
+								<p>However, a initial shortlist of events has been created (and added to if needed) to check for these correlations later on. These include the <b><i>2016 elections, the death of Kian delos Santos, Leila de Lima's detention, "ninja cops", and the 2022 elections</i></b>.</p>
+							</article>
+
+							<h2>Visualization</h2>
+							<article class="box style2">
+								<h3>What plots did we use?</h3><br>
+								<p>After preprocessing, but before feature generation, the dataset has <b>60 Tweets</b> (rows) and <b>25 features</b> (columns). Features can be increased as needed for further analysis.</p>
+								<hr>
+								<h3>What plots didn't we use?</h3><br>
+								<p>Again, given that we .</p>
+							</article>
+
+							<h2>Features</h2>
+							<article class="box style2">
+								<h3>What is the size/shape of the dataset?</h3><br>
+								<p>After preprocessing, but before feature generation, the dataset has <b>60 Tweets</b> (rows) and <b>25 features</b> (columns). Features can be increased as needed for further analysis.</p>
+								<hr>
+								<h3>How many unique accounts are in the dataset?</h3><br>
+								<p>The 60 tweets collected come from <b>51 unique accounts</b>.</p>
+							</article>
+						</div>
 					</div>
-					
+					<footer>
+						<p>Lorem ipsum dolor sit sapien vestibulum ipsum primis?</p>
+					</footer>
 				</div>
 				<div class="container">
-					<iframe src="test_notebook.html" frameborder="0" width="100%" height="400"></iframe>
+					<h2>Supplementary Python Notebook</h2>
+					<iframe src="test_notebook.html" frameborder="0" width="100%" height="750"></iframe>
 				</div>
 			</article>
 
