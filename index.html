@@ -184,10 +184,14 @@
 								<h4><i>Time Series Analysis</i></h4>
 								<h4>How did we perform interpolation on our data?</h4>
 								<p>As of the moment, interpolation does not seem useful to the study. However, a quick linear interpolation of the amount of tweets per month was generated through python, although not particularly informative.</p>
+								<img src="images/line_month_inter.png" width="350" alt="" />
 								<hr>
 								<h4>How did we perform binning on our data?</h4>
-								<p>With regards to binning, we have decided to bin our tweets in <b>three ways</b>. The first is to bin tweets as “Disinformation tweets around the time of Kian delos Santos’s death” and “Disinformation tweets during all other time periods.”</p>
+								<p>With regards to binning, there are <b>three possible ways</b> to bin our data.</p>
+								<p>The first is to bin tweets as “Disinformation tweets around the time of Kian delos Santos’s death” and “Disinformation tweets during all other time periods.”</p>
+								<img src="images/bin_2.png" width="350" alt="" />
 								<p>The second way is to bin them as “Disinformation tweets before the time of Kian delos Santos’s death,” “Disinformation tweets around the time of Kian delos Santos’s death,” and “Disinformation tweets after the time of Kian delos Santos’s death.”</p>
+								<img src="images/bin_3.png" width="350" alt="" />
 								<p>The third way is to bin them according to K-means clustering, which means we will determine what type of binning gives us the tightest groups.</p>
 							</article>
 						</div>
@@ -218,10 +222,13 @@
 								<hr>
 								<h4>What plots did we use?</h4>
 								<p>Various <b>histograms</b> have been created from the dataset with various indices, such as by year or by month. Additionally, histograms have been created for the temporary bins discussed in the bins section (except clustering).</p>
+								<img src="images/histo_month.png" width="350" alt="" />
 								<p>A <b>line graph</b> is useful for time-series analysis as trends between timestamps are easier represented. A simple line graph was created through python (where points are connected through piecewise linear lines), and as needed, line graphs of greater complexity (for example, through interpolation), can also be created. However, such a graph does not seem particularly useful for the study as of now, thus only a linear line graph was created.</p>	
+								<img src="images/line_month.png" width="350" alt="" />
 								<hr>
 								<h4>Can we use heat maps/swarm plots/violin plots?</h4>
 								<p>The above graphs cannot be created from our dataset as only one variable is relevant to the study, which is time posted.</p>
+								<footnote>Note that better images can be found within the Python Notebook below.</footnote>
 							</article>
 
 							<article class="box style2">
@@ -232,7 +239,6 @@
 								<p>For the <b>Mann-Whitney U Test</b>, we’ll be defining our two groups as “Disinformation tweets around the time of Kian delos Santos’s death” and “Disinformation tweets during all other time periods.” This test will tell us if there is a significant difference in disinformation tweet counts between the time period of Kian’s death, and all other time periods.</p>
 								<p>For the <b>Kruskal-Wallis Test</b>, we will define three groups, “Disinformation tweets before the time of Kian delos Santos’s death,” “Disinformation tweets around the time of Kian delos Santos’s death,” and “Disinformation tweets after the time of Kian delos Santos’s death.” This test will tell us if there is a significant difference in disinformation tweet counts among the three time periods, and then also be able to further analyze with other tests to determine which specific pairs of groups differ significantly. </p>								
 								<p>We also plan on using the <b>K-means clustering machine learning algorithm</b> to find the best way to cluster/group our tweets. We will vary the number of clusters and determine which number will yield the tightest clusters. Through this, we will be able to determine if there indeed was a cluster around the time of Kian delos Santos’s death and also be able to compare the sizes of each cluster.</p>
-				
 								<hr>
 								<h4>What features did we add to the dataset?</h4>
 								<p>Aside from replacing account handles with <b>ID numbers</b>, new features can be generated through splits of the date posted: by time, month, date, or year. More features can also be added depending on the <b>binning process/cluster generation</b>.</p>
