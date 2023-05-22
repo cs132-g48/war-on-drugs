@@ -165,34 +165,42 @@
 								<hr>
 								<!--<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>-->
 								<h4>How did we ensure that there were no missing values?</h4>
-								<p>All the relevant information taken from a <b><u>War on Drugs mis/disinformation tweet</u></b> is acquired from data collection: this includes the <b><i>Tweet content</i></b> (allowing us to review the Tweet for data collection), <b><i>account handle</i></b>, <b><i>Tweet URL</i></b> (as proof the Tweet existed at some point in data collection), and <b><i>date posted</i></b>.</p>
+								<p>All the relevant information taken from a <b><u>War on Drugs mis/disinformation tweet</u></b> is acquired from data collection.</p>
+								<p>This includes the <b><i>Tweet content</i></b> (allowing us to review the Tweet for data collection), <b><i>account handle</i></b>, <b><i>Tweet URL</i></b> (as proof the Tweet existed at some point in data collection), and <b><i>date posted</i></b>.</p>
 								<p>The dataset was also quickly checked after data collection through Python to guarantee that none of the tweets have missing values for any of the necessary information. This can be seen in the attached <b>Python Notebook</b> below.</p>
 								<hr>
 								<h4>How did we handle outliers?</h4>
-								<p>In a <b>time-series analysis<i></i></b>, outliers are generally referred to as extremely high values. As our research question involves checking peaks in Tweet frequency, it is important to <b>keep high frequencies</b> in our data set.</p>
-								<p>Outliers can also exist by being outside of the time period under study (in our case, from 2016 to 2022), which can be checked through Python by finding the minimum and maximum values of the date posted. No outliers were found through this step.</p>
+								<p>In a <b>time-series analysis<i></i></b>, outliers are generally referred to as extremely high values. As our research question involves checking peaks in Tweet frequency, it is important to <b><i>keep high frequencies</i></b> in our data set.</p>
+								<p>Outliers can also exist by being <i>outside of the time period</i> under study (in our case, from 2016 to 2022), which can be checked through Python by finding the minimum and maximum values of the date posted. <b>No outliers</b> were found through this step.</p>
 								<hr>
 								<h4>How did we ensure format consistency?</h4>
-								<p>Tweets are reviewed by hand by us researchers. Aside from human review, Python was used to ensure string consistency (for example, dates can be guaranteed to be formatted as <b>&lt;number&gt;&lt;number&gt;&lt;slash&gt;&lt;number&gt;&lt;number&gt;</b>), as well as low level checking for dates and months (for example, months should not go beyond '12'). Both Python and human review ensure formatting is what it needs to be.</p>
+								<p><b>Tweets are reviewed</b> by hand by us researchers. Aside from human review, Python was used to ensure string consistency.</p>
+								<p>For example, dates were verified to be formatted as: <br><b><i>&lt;number&gt;&lt;number&gt;&lt;slash&gt;&lt;number&gt;&lt;number&gt;</i></b><br></p>
+								<p>Additionally, low level checking was also performed for dates and months (e.g., months should not go beyond '12'). Both Python and human review ensure formatting is what it needs to be.</p>
 								<hr>
 								<h4>Did we normalize/standardize/scale our data?</h4>
-								<p>As this study tackles only <b><i>one variable</i></b> (time of Tweet), there is <b>no need to normalize or scale</b>.</p>
+								<p>As this study tackles only <b>one variable</b> (time of Tweet), there is <b><i>no need to normalize or scale</i></b>.</p>
 								<hr>
 								<h4>How did we categorically encode our data?</h4>
-								<p>While this study tackles numerical data in dates, some relevant information is still categorial. For anonymity, account handles have been <b><i>assigned a unique ID number per account</i></b> through the <b>Pandas library</b>, which will be used for extraneous analysis. Each individual Tweet is also assigned a unique ID during collection for anonymous reference during analysis. </p>
+								<p>While this study tackles numerical data in dates, some relevant information is still categorial.</p>
+								<p>For anonymity, <b><i>account handles</i></b> were <b><i>assigned a unique ID number per account</i></b> through the <b>Pandas library</b>, which will then be used for extraneous analysis.</p>
+								<p>Each <b><i>individual Tweet</i></b> is also <b><i>assigned a unique ID during collection</i></b> for anonymous reference during analysis. </p>
 								<hr>
 								<h4><i>Time Series Analysis</i></h4>
 								<h4>How did we perform interpolation on our data?</h4>
-								<p>As of the moment, interpolation does not seem useful to the study. However, a quick linear interpolation of the amount of tweets per month was generated through python, although not particularly informative.</p>
-								<img src="images/line_month_inter.png" width="350" alt="" />
+								<p>As of the moment, we are still not quite sure whether interpolating our data would prove useful in our study. However, there are a few interpolation methods of note.</p>
+								<p>The graphs generated by such methods can be seen in the graph below. Note that some methods (quadratic and cubic interpolation) add <i>negative values</i> in order to generate a proper smooth curve for the positive peaks.</p>
+								<img src="images/inter_month.png" width="350" alt="" />
+								<p><br>Based on the graph above, <b>piecewise polynomial interpolation</b> seems the most promising. This can be seen better in the isolated graph below.</p>
+								<img src="images/inter_month_piecewise.png" width="350" alt="" />
 								<hr>
 								<h4>How did we perform binning on our data?</h4>
 								<p>With regards to binning, there are <b>three possible ways</b> to bin our data.</p>
-								<p>The first is to bin tweets as “Disinformation tweets around the time of Kian delos Santos’s death” and “Disinformation tweets during all other time periods.”</p>
+								<p>The first is to bin tweets as <b><i>“Disinformation tweets around the time of Kian delos Santos’s death” and “Disinformation tweets during all other time periods.”</i></b></p>
 								<img src="images/bin_2.png" width="350" alt="" />
-								<p>The second way is to bin them as “Disinformation tweets before the time of Kian delos Santos’s death,” “Disinformation tweets around the time of Kian delos Santos’s death,” and “Disinformation tweets after the time of Kian delos Santos’s death.”</p>
+								<p>The second way is to bin them as <b><i>“Disinformation tweets before the time of Kian delos Santos’s death,” “Disinformation tweets around the time of Kian delos Santos’s death,” and “Disinformation tweets after the time of Kian delos Santos’s death.”</i></b></p>
 								<img src="images/bin_3.png" width="350" alt="" />
-								<p>The third way is to bin them according to K-means clustering, which means we will determine what type of binning gives us the tightest groups.</p>
+								<p>The third way is to bin them according to <b>K-means clustering,</b> which means we will determine what type of binning gives us the tightest groups.</p>
 							</article>
 						</div>
 
@@ -221,9 +229,12 @@
 								<br><h2>Visualization</h2>
 								<hr>
 								<h4>What plots did we use?</h4>
-								<p>Various <b>histograms</b> have been created from the dataset with various indices, such as by year or by month. Additionally, histograms have been created for the temporary bins discussed in the bins section (except clustering).</p>
+								<p>Various <b>histograms</b> have been created from the dataset with various indices, such as by month, by quarter, and by year. Additionally, histograms have been created for the temporary bins discussed in the bins section (except clustering).</p>
 								<img src="images/histo_month.png" width="350" alt="" />
-								<p>A <b>line graph</b> is useful for time-series analysis as trends between timestamps are easier represented. A simple line graph was created through python (where points are connected through piecewise linear lines), and as needed, line graphs of greater complexity (for example, through interpolation), can also be created. However, such a graph does not seem particularly useful for the study as of now, thus only a linear line graph was created.</p>	
+								<img src="images/histo_quarter.png" width="350" alt="" />
+								<img src="images/histo_month.png" width="350" alt="" />
+
+								<p>A <b>line graph</b> is useful for time-series analysis as trends between timestamps are easier represented. A simple line graph was created through Python (where points are connected through piecewise linear lines), and as needed, line graphs of greater complexity (for example, through interpolation, as discussed previously), can also be created. </p>	
 								<img src="images/line_month.png" width="350" alt="" />
 								<hr>
 								<h4>Can we use heat maps/swarm plots/violin plots?</h4>
@@ -246,7 +257,7 @@
 						</div>
 					</div>
 					<footer>
-						<p>Lorem ipsum dolor sit sapien vestibulum ipsum primis?</p>
+						
 					</footer>
 				</div>
 				<div class="container">
