@@ -1,369 +1,371 @@
 <!DOCTYPE HTML>
 <!--
-	Miniport by HTML5 UP
+	Stellar by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
 	<head>
-		<title>PH Twitter Fake News Analysis</title>
+		<title>Searching for the High</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			#poster-container embed {
+				width: 100%;
+				height: 100vh; /* 100% of the viewport height */
+			}
+		</style>
+		<script>
+			window.addEventListener('DOMContentLoaded', function() {
+			  var pdfContainer = document.getElementById('poster-container');
+			  var embed = document.createElement('embed');
+			  embed.src = 'poster.pdf';
+			  embed.type = 'application/pdf';
+			  //embed.width = '100%';
+			  //embed.height = '100vh';
+		  
+			  // Delay the PDF loading by 2 seconds (adjust the delay as needed)
+			  // This is necessary so as to not disrupt other animations in the website.
+			  setTimeout(function() {
+				pdfContainer.appendChild(embed);
+			  }, 2000);
+			});
+		  </script>
+		  
+		  
 	</head>
 	<body class="is-preload">
 
-		<!-- Nav -->
-			<nav id="nav">
-				<ul class="container">
-					<li><a href="#top">Top</a></li>
-					<li><a href="#overview">Overview</a></li>
-					<li><a href="#data">Data</a></li>
-					<li><a href="#methods">Methods</a></li>
-					<li><a href="#results">Results</a></li>
-					<li><a href="#team">Team</a></li>
-				</ul>
-			</nav>
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-		<!-- Home -->
-			<article id="top" class="wrapper style1">
-				<div class="container">
-					<div class="row">
-						<div class="col-4 col-5-large col-12-medium">
-							<span class="image fit"><img src="images/pic00.jpg" alt="" /></span>
-						</div>
-						<div class="col-8 col-7-large col-12-medium">
-							<header>
-								<h1>My God, <strong>We Hate Drugs</strong>.</h1>
-							</header>
-							<p>And this is our project, <strong>Project Title</strong>, <em>a short explanation of the project objectives</em>. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-							<p>Data Science Team</p>
-							<ul style="list-style-type:none; margin-top:-30px;">
-							  <li>Acha Achapero, WFX</li>
-							  <li>Anton Bolado, WFW</li>
-							  <li>Luigi Torres, WFX</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</article>
-
-		<!-- Overview -->
-			<article id="overview" class="wrapper style2">
-				<div class="container">
-					<header>
-						<h2>Here's an overview of our project.</h2>
-						<p>Former president Rodrigo Duterte's infamous <b>War on Drugs</b> is a source of great controversy, and as a result, the strong subject of internet traffic. However, this traffic is not evenly distributed: <a href="https://trends.google.com/trends/explore?date=2016-01-01%202022-12-31&geo=PH&q=war%20on%20drugs&hl=en">Google Trends</a> data shows that Philippine search queries involving the keywords "War on Drugs" peaked around the middle of 2017—<b>Kian delos Santos's death.</b></p>
-						<p><br><i>Did this significant peak of online traffic towards the war on drugs also cause a rise in fake news tweets?</i></p>
+				<!-- Header -->
+					<header id="header" class="alt">
+						<!--span class="logo"><img src="images/cs132logo.svg" width="300px" alt="" /></span-->
+						<span class="logo"><img src="images/bucketboys.png" width="300px" alt="" /></span>
+						<h1><b><i>Searching for the High</i></b></h1>
+						<p><i>A data science research project portfolio for <b>CS 132 AY22-23 S2.</b></i></p>
 					</header>
-					<div class="row aln-center">
-						<div class="col-4 col-6-medium col-12-small">
-							<section class="box style1">
-								<span class="icon featured fa-comments"></span>
-								<h3>Research question</h3>
-								<p>Can the peak of war on drugs related mis/disinformation be associated with a <i>specific event</i>?</p>
-							</section>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<section class="box style1">
-								<span class="icon featured fa-question-circle"></span>
-								<h3>Null hypothesis</h3>
-								<p>There is <i>no specific event</i> which caused a peak in war on drugs related mis/disinformation.</p>
-							</section>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<section class="box style1">
-								<span class="icon solid featured fa-question-circle"></span>
-								<h3>Alternative hypothesis</h3>
-								<p><i>Kian delos Santos’s death</i> caused a peak in war on drugs related mis/disinformation.</p>
-							</section>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<section class="box style1">
-								<span class="icon featured fa-thumbs-up"></span>
-								<h3>Action plan</h3>
-								<p>Analyze the <i>frequency of posting time</i> of war on drugs related mis/disinformation</p>
-							</section>
-						</div>
-					</div>
-					<footer>
-						<p>Lorem ipsum dolor sit sapien vestibulum ipsum primis?</p>
-						<a href="#portfolio" class="button large scrolly">Let's take a look at our data</a>
-					</footer>
-				</div>
-			</article>
 
-		<!-- Data -->
-			<article id="data" class="wrapper style3">
-				<div class="container">
-					<header>
-						<h2>We mined the internet for fake news data.</h2>
-						<p>Proin odio consequat  sapien vestibulum consequat lorem dolore feugiat.</p>
-					</header>
-					<div class="row">
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-								<h3><a href="#">Topic</a></h3>
-								<p>Ornare nulla proin odio consequat.</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-								<h3><a href="#">Keywords</a></h3>
-								<p>Ornare nulla proin odio consequat.</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
-								<h3><a href="#">Tools</a></h3>
-								<p>Ornare nulla proin odio consequat.</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
-								<h3><a href="#">Tempus dolore</a></h3>
-								<p>Ornare nulla proin odio consequat.</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic05.jpg" alt="" /></a>
-								<h3><a href="#">Feugiat aliquam</a></h3>
-								<p>Ornare nulla proin odio consequat.</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic06.jpg" alt="" /></a>
-								<h3><a href="#">Sed amet ornare</a></h3>
-								<p>Ornare nulla proin odio consequat.</p>
-							</article>
-						</div>
-					</div>
-					<footer>
-						<p>Lorem ipsum dolor sit sapien vestibulum ipsum primis?</p>
-					</footer>
-				</div>
-			</article>
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="#intro" class="active">Introduction</a></li>
+							<li><a href="#overview">Overview</a></li>
+							<li><a href="#collection">Collection</a></li>
+							<li><a href="#exploration">Exploration</a></li>
+							<li><a href="#modeling">Modeling</a></li>
+							<li><a href="#results">Results</a></li>
+							<li><a href="#conclusion">Conclusion</a></li>
+							<li><a href="#poster">Poster</a></li>
+						</ul>
+					</nav>
 
-			<!-- Methods -->
-			<article id="methods" class="wrapper style3">
-				<div class="container">
-					<header>
-						<h2>So, what does our data look like?</h2>
-						<p>What did we find upon exploring our data?</p>
-					</header>
-					<div class="row">
-						<div class="col-6 col-6-medium col-12-small">
-							
-							<article class="box style2">
-								<br><h2>Data Preprocessing</h2>
-								<hr>
-								<!--<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>-->
-								<h4>How did we ensure that there were no missing values?</h4>
-								<p>All the relevant information taken from a <b><u>War on Drugs mis/disinformation tweet</u></b> is acquired from data collection.</p>
-								<p>This includes the <b><i>Tweet content</i></b> (allowing us to review the Tweet for data collection), <b><i>account handle</i></b>, <b><i>Tweet URL</i></b> (as proof the Tweet existed at some point in data collection), and <b><i>date posted</i></b>.</p>
-								<p>The dataset was also quickly checked after data collection through Python to guarantee that none of the tweets have missing values for any of the necessary information. This can be seen in the attached <b>Python Notebook</b> below.</p>
-								<hr>
-								<h4>How did we handle outliers?</h4>
-								<p>In a <b>time-series analysis<i></i></b>, outliers are generally referred to as extremely high values. As our research question involves checking peaks in Tweet frequency, it is important to <b><i>keep high frequencies</i></b> in our data set.</p>
-								<p>Outliers can also exist by being <i>outside of the time period</i> under study (in our case, from 2016 to 2022), which can be checked through Python by finding the minimum and maximum values of the date posted. <b>No outliers</b> were found through this step.</p>
-								<hr>
-								<h4>How did we ensure format consistency?</h4>
-								<p><b>Tweets are reviewed</b> by hand by us researchers. Aside from human review, Python was used to ensure string consistency.</p>
-								<p>For example, dates were verified to be formatted as: <br><b><i>&lt;number&gt;&lt;number&gt;&lt;slash&gt;&lt;number&gt;&lt;number&gt;</i></b><br></p>
-								<p>Additionally, low level checking was also performed for dates and months (e.g., months should not go beyond '12'). Both Python and human review ensure formatting is what it needs to be.</p>
-								<hr>
-								<h4>Did we normalize/standardize/scale our data?</h4>
-								<p>As this study tackles only <b>one variable</b> (time of Tweet), there is <b><i>no need to normalize or scale</i></b>.</p>
-								<hr>
-								<h4>How did we categorically encode our data?</h4>
-								<p>While this study tackles numerical data in dates, some relevant information is still categorial.</p>
-								<p>For anonymity, <b><i>account handles</i></b> were <b><i>assigned a unique ID number per account</i></b> through the <b>Pandas library</b>, which will then be used for extraneous analysis.</p>
-								<p>Each <b><i>individual Tweet</i></b> is also <b><i>assigned a unique ID during collection</i></b> for anonymous reference during analysis. </p>
-								<hr>
-								<h4><i>Time Series Analysis</i></h4>
-								<h4>How did we perform interpolation on our data?</h4>
-								<p>As of the moment, we are still not quite sure whether interpolating our data would prove useful in our study. However, there are a few interpolation methods of note.</p>
-								<p>The graphs generated by such methods can be seen in the graph below. Note that some methods (quadratic and cubic interpolation) add <i>negative values</i> in order to generate a proper smooth curve for the positive peaks.</p>
-								<img src="images/inter_month.png" width="350" alt="" />
-								<p><br>Based on the graph above, <b>piecewise polynomial interpolation</b> seems the most promising. This is because it <i>does not use negative values, is not as simple and unrealistic as linear, and does not copy other data values despite missing endpoints.</i> This can be seen better in the isolated graph below.</p>
-								<img src="images/inter_month_piecewise.png" width="350" alt="" />
-								<hr>
-								<h4>How did we perform binning on our data?</h4>
-								<p>With regards to binning, there are <b>three possible ways</b> to bin our data.</p>
-								<p>The first is to bin tweets as <b><i>“Disinformation tweets around the time of Kian delos Santos’s death” and “Disinformation tweets during all other time periods.”</i></b></p>
-								<img src="images/bin_2.png" width="350" alt="" />
-								<p>The second way is to bin them as <b><i>“Disinformation tweets before the time of Kian delos Santos’s death,” “Disinformation tweets around the time of Kian delos Santos’s death,” and “Disinformation tweets after the time of Kian delos Santos’s death.”</i></b></p>
-								<img src="images/bin_3.png" width="350" alt="" />
-								<p>The third way is to bin them according to <b>K-means clustering,</b> which means we will determine what type of binning gives us the tightest groups.</p>
-							</article>
-						</div>
+				<!-- Main -->
+					<div id="main">
 
-
-						<div class="col-6 col-6-medium col-12-small">
-							
-							<article class="box style2">
-								<br><h2>Other Characteristics</h2>
-								<hr>
-								<h4>What is the size/shape of the dataset?</h4>
-								<p>After preprocessing, but before feature generation, the dataset has <b>60 Tweets</b> (rows) and <b>25 features</b> (columns). Features can be increased as needed for further analysis.</p>
-								<hr>
-								<h4>How many unique accounts are in the dataset?</h4>
-								<p>The 60 tweets collected come from <b>51 unique accounts</b>.</p>
-								<hr>
-								<h4>What is the range of the dates posted?</h4>
-								<p>Tweets collected range from <b>February 2016</b> to <b>June 2022</b>.</p>
-								<hr>
-								<h4>How does the data compare to historical events?</h4>
-								<p>The point of the study is to check if a specific event caused the peak of War on Drugs related mis/disinformation, so this question will be tackled in greater depth later in the research process.</p>
-								<p>However, a initial shortlist of events has been created (and added to if needed) to check for these correlations later on. These include the <b><i>2016 elections, the death of Kian delos Santos, Leila de Lima's detention, "ninja cops", and the 2022 elections</i></b>.</p>
-							</article>
-
-							
-							<article class="box style2">
-								<br><h2>Visualization</h2>
-								<hr>
-								<h4>What plots did we use?</h4>
-								<p>Various <b>histograms</b> have been created from the dataset with various indices, such as by month, by quarter, and by year. Additionally, a bar graph and histogram were also created for the temporary bins discussed in the bins section (except clustering).</p>
-								<img src="images/histo_month.png" width="350" alt="" />
-								<img src="images/histo_quarter.png" width="350" alt="" />
-								<img src="images/histo_month.png" width="350" alt="" />
-
-								<p>A <b>line graph</b> is useful for time-series analysis as trends between timestamps are easier represented. A simple line graph was created through Python (where points are connected through piecewise linear lines), and as needed, line graphs of greater complexity (for example, through interpolation, as discussed previously), can also be created. </p>	
-								<img src="images/line_month.png" width="350" alt="" />
-								<hr>
-								<h4>Can we use heat maps/swarm plots/violin plots?</h4>
-								<p>The above graphs cannot be created from our dataset as only one variable is relevant to the study, which is time posted.</p>
-								<footnote>Note that better images can be found within the Python Notebook below.</footnote>
-							</article>
-
-							<article class="box style2">
-								<br><h2>Features</h2>
-								<hr>
-								<h4>What statistical tests do we plan on using?</h4>
-								<p>The statistical tests we will likely use are the Mann-Whitney U Test and the Kruskal-Wallis Test.</p> 
-								<p>For the <b>Mann-Whitney U Test</b>, we’ll be defining our two groups as “Disinformation tweets around the time of Kian delos Santos’s death” and “Disinformation tweets during all other time periods.” This test will tell us if there is a significant difference in disinformation tweet counts between the time period of Kian’s death, and all other time periods.</p>
-								<p>For the <b>Kruskal-Wallis Test</b>, we will define three groups, “Disinformation tweets before the time of Kian delos Santos’s death,” “Disinformation tweets around the time of Kian delos Santos’s death,” and “Disinformation tweets after the time of Kian delos Santos’s death.” This test will tell us if there is a significant difference in disinformation tweet counts among the three time periods, and then also be able to further analyze with other tests to determine which specific pairs of groups differ significantly. </p>								
-								<p>We also plan on using the <b>K-means clustering machine learning algorithm</b> to find the best way to cluster/group our tweets. We will vary the number of clusters and determine which number will yield the tightest clusters. Through this, we will be able to determine if there indeed was a cluster around the time of Kian delos Santos’s death and also be able to compare the sizes of each cluster.</p>
-								<hr>
-								<h4>What features did we add to the dataset?</h4>
-								<p>Aside from replacing account handles with <b>ID numbers</b>, new features can be generated through splits of the date posted: by time, month, date, or year. More features can also be added depending on the <b><i>binning process/cluster generation</i></b>.</p>
-							</article>
-						</div>
-					</div>
-					<footer>
-						
-					</footer>
-				</div>
-				<div class="container">
-					<h2>Supplementary Python Notebook</h2>
-					<iframe src="data_exploration.html" frameborder="0" width="100%" height="750"></iframe>
-				</div>
-			</article>
-
-			<!-- Results -->
-			<article id="results" class="wrapper style3">
-				<div class="container">
-					<header>
-						<h2>Here's what we found out.</h2>
-						<p>Proin odio consequat  sapien vestibulum consequat lorem dolore feugiat.</p>
-					</header>
-					<div class="row">
-						<div class="col-6 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-								<h3><a href="#">Results</a></h3>
-								<p>Ornare nulla proin odio consequat.</p>
-							</article>
-						</div>
-						<div class="col-6 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-								<h3><a href="#">Results</a></h3>
-								<p>Ornare nulla proin odio consequat.</p>
-							</article>
-						</div>
-					</div>
-					<footer>
-						<p>Want to learn more? Take a look at our source codes.</p>
-						<a href="#contact" class="button large scrolly">Github Repo</a>
-					</footer>
-				</div>
-			</article>
-
-		<!-- Team -->
-			<article id="team" class="wrapper style4">
-				<div class="container medium">
-					<header>
-						<h2>We'd like to hear from you.</h2>
-						<p>You can add more information about the team members here.</p>
-					</header>
-					<div class="row">
-						<div class="col-12">
-							<form method="post" action="#">
-								<div class="row">
-									<div class="col-6 col-12-small">
-										<input type="text" name="name" id="name" placeholder="Name" />
-									</div>
-									<div class="col-6 col-12-small">
-										<input type="text" name="email" id="email" placeholder="Email" />
-									</div>
-									<div class="col-12">
-										<input type="text" name="subject" id="subject" placeholder="Subject" />
-									</div>
-									<div class="col-12">
-										<textarea name="message" id="message" placeholder="Message"></textarea>
-									</div>
-									<div class="col-12">
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" /></li>
-											<li><input type="reset" value="Clear Form" class="alt" /></li>
+						<!-- Introduction -->
+							<section id="intro" class="main">
+								<div class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2>Hi! We're the <b>Bucket Boys.</b></h2>
+										</header>
+										<p>This is our data science project, <b><i>Searching for the High</i></b>, where we aim
+										to analyze the peak of <i>war-on-drugs</i>-related mis/disinformation.</p>
+										
+										<h3>Team Members</h3>
+										<ul class="alt" style="margin-top:-20px;">
+										<p></p>
+										<li><i>Acha Achapero</i> (WFX)<br>
+											<i>Anton Bolado</i> (WFW)<br>
+											<i>Luigi Torres</i> (WFX)</li>
 										</ul>
 									</div>
+									<span class="image"><img src="images/cs132logobrown.svg" alt="" /></span>
 								</div>
-							</form>
-						</div>
-						<div class="col-12">
-							<hr />
-							<h3>Find me on ...</h3>
-							<ul class="social">
-								<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-								<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-								<li><a href="#" class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
-								<li><a href="#" class="icon brands fa-google-plus"><span class="label">Google+</span></a></li>
-								<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-								<!--
-								<li><a href="#" class="icon solid fa-rss"><span>RSS</span></a></li>
-								<li><a href="#" class="icon brands fa-instagram"><span>Instagram</span></a></li>
-								<li><a href="#" class="icon brands fa-foursquare"><span>Foursquare</span></a></li>
-								<li><a href="#" class="icon brands fa-skype"><span>Skype</span></a></li>
-								<li><a href="#" class="icon brands fa-soundcloud"><span>Soundcloud</span></a></li>
-								<li><a href="#" class="icon brands fa-youtube"><span>YouTube</span></a></li>
-								<li><a href="#" class="icon brands fa-blogger"><span>Blogger</span></a></li>
-								<li><a href="#" class="icon brands fa-flickr"><span>Flickr</span></a></li>
-								<li><a href="#" class="icon brands fa-vimeo"><span>Vimeo</span></a></li>
-								-->
-							</ul>
-							<hr />
-						</div>
+							</section>
+
+						<!-- Overview -->
+							<section id="overview" class="main special">
+								<header class="major">
+									<h2>Overview of the Project</h2>
+								</header>
+								
+								<p>Former president Rodrigo Duterte's infamous <b>War on Drugs</b> is a source of
+								great controversy, and as a result, the strong subject of internet traffic. However,
+								this traffic is not evenly distributed: <a href="https://trends.google.com/trends/explore?date=2016-01-01%202022-12-31&geo=PH&q=war%20on%20drugs&hl=en" target="_blank">Google Trends</a>
+								data shows that Philippine search queries involving the keywords <i>"war on drugs"</i> peaked
+								around the middle of 2017—around the time of 
+								<a href="https://www.gmanetwork.com/news/specials/content/24/the-kian-delos-santos-case-a-timeline/" target="_blank"><b>Kian delos Santos's death.</b></a></p>
+
+								<ul class="features">
+									<li>
+										<span class="icon solid major style1 fa-question"></span>
+										<h3>Research Question</h3>
+										<p>Can the peak of war-on-drugs-related mis/disinformation be associated with a specific event?</p>
+									</li>
+									<li>
+										<span class="icon solid major style3 fa-lightbulb"></span>
+										<h3>Hypotheses</h3>
+										<p><b>H<sub>0</sub></b> | No specific event caused a peak in war-on-drugs-related mis/disinformation.</p>
+										<hr>
+										<p><b>H<sub>1</sub></b> | Kian delos Santos’s death caused the peak in war-on-drugs-related mis/disinformation.</p>
+									</li>
+									<li>
+										<span class="icon brands major style5 fa-twitter"></span>
+										<h3>Action Plan</h3>
+										<p>Analyze the frequency of posting time of war-on-drugs-related mis/disinformation</p>
+									</li>
+								</ul>
+							</section>
+
+						<!-- Collection -->
+							<section id="collection" class="main special">
+								<header class="major">
+									<h2>Collecting the Data</h2>
+								</header>
+								<ul class="statistics">
+									<li class="style1">
+										<span class="icon solid fa-code-branch"></span>
+										<strong>110,000+</strong> Scraped
+									</li>
+									<li class="style2">
+										<span class="icon fa-folder-open"></span>
+										<strong>30,000+</strong> Sampled
+									</li>
+									<li class="style3">
+										<span class="icon solid fa-signal"></span>
+										<strong>155</strong> Dataset
+									</li>
+								</ul>
+								<p class="content">
+								<a href="https://github.com/JustAnotherArchivist/snscrape" target="_blank"><b>Snscrape</b></a>
+								was used to collect a batch of tweets using war-on-drugs-related keywords, such as the various
+								ways to spell Duterte (like <i>"DU30"</i> or <i>"PRRD"</i> ), different terms for drugs <i>("shabu,
+								droga, meth"</i> ), and war-on-drugs-specific keywords such as <i>"tokhang".</i> As this batch
+								is far too large (approximately 110,000 tweets large), a random sample of the batch was
+								scoured by-hand for war-on-drugs-related mis/disinformation.
+
+								At the end of the process, <b>155 mis/disinformation tweets were acquired.</b>
+								</p>
+							</section>
+						
+
+						<!-- Exploration -->
+						<section id="exploration" class="main special">
+							<header class="major">
+								<h2>Exploring the Data</h2>
+							</header>
+							<div class="content">
+								<h2><b>Data Preprocessing</b></h2>
+								<h3><i>How did we ensure that there were no missing values?</i></h3>
+								<p class="content">
+								All the relevant information taken from a <b>war on drugs mis/disinformation tweet</b>
+								is acquired from data collection.
+								
+								This includes the <i>tweet content</i> (allowing us to review the tweet for data
+								collection), <i>account handle, tweet URL</i> (as proof the tweet existed at some
+								point in data collection), and <i>date posted.</i>
+
+								The dataset was also quickly checked after data collection through Python
+								to guarantee that none of the tweets have missing values for any of the
+								necessary information. This can be seen in the attached Python Notebook below.
+								</p>
+
+								<h3><i>How did we handle outliers?</i></h3>
+								<p class="content">
+								In a <b>time-series analysis,</b> outliers are generally referred to as extremely
+								high values. As our research question involves checking peaks in tweet frequency,
+								it is important to keep high frequencies in our data set.
+
+								Outliers can also exist by being outside of the time period under study (in our case,
+								from 2016 to 2022), which can be checked through Python by finding the minimum and
+								maximum	values of the date posted. <b>No outliers</b> were found through this step.
+								</p>
+
+								<h3><i>How did ensure format consistency?</i></h3>
+								<p class="content">
+								Tweets are reviewed by hand by us researchers. Aside from human review, Python
+								was used to ensure string consistency.
+
+								For example, dates were verified to be formatted as:
+								<br><b><i>&lt;number&gt;&lt;number&gt;&lt;slash&gt;&lt;number&gt;&lt;number&gt;</i></b>
+								
+								Additionally, low level checking was also performed for dates and months
+								(e.g., months should not go beyond '12'). Both Python and human review ensure
+								formatting is what it needs to be.
+								</p>
+
+								<h3><i>Did we normalize/standardize/scale our data?</i></h3>
+								<p>
+								As this study tackles only <b>one variable</b> (time of tweet),
+								there is <b>no need to normalize or scale.</b>	
+								</p>
+
+								<h3><i>How did we categorically encode our data?</i></h3>
+								<p class="content">
+								While this study tackles numerical data in dates, some relevant information is
+								still categorial.
+
+								For anonymity, <b>account handles were assigned a unique ID number</b> per account through
+								the Pandas library, which will then be used for extraneous analysis.
+								
+								Each <b>individual tweet is also assigned a unique ID</b> during collection for anonymous
+								reference during analysis. 
+								</p>
+
+								<h3><i>How did we perform interpolation on our data?</i></h3>
+								<p class="content">
+								When our dataset was much smaller, it initially seemed like we would need to perform
+								interpolation. There are a few interpolation methods of note and their graphs can be
+								seen below. Note that some methods (quadratic and cubic interpolation) add
+								negative values in order to generate a proper smooth curve for the positive peaks.
+								</p>
+								<img src="images/graphs/inter_month.png" width="100%"/>
+								<p class="content">
+								Based on the graph above, <b>piecewise polynomial interpolation</b> seems the most promising.
+								This is because it <i>does not use negative values, is not as simple and unrealistic as
+								linear, and does not copy other data values despite missing endpoints.</i> This can be seen
+								better in the isolated graph below.
+								</p>
+								<img src="images/graphs/inter_month_piecewise.png" width="75%"/>
+
+								<h3><i>How did we perform binning on our data?</i></h3>
+								<p class="content">
+								We binned our data in terms of what we consider to be <i>"part of the event."</i>
+								The tweets were binned as “Disinformation tweets <b>before</b> the time of Kian delos
+								Santos’s death,” “Disinformation tweets <b>around the time</b> of Kian delos Santos’s death,”
+								and “Disinformation tweets <b>after</b> the time of Kian delos Santos’s death.”
+								</p>
+								<img src="images/graphs/bin3.png" width="75%"/>
+								
+								
+								
+							</div>
+							<hr>
+							<div class="content">
+								<h2><b>Other Characteristics</b></h2>
+								<h3><i>What are some other characteristics of the dataset?</i></h3>
+								<p class="content">After preprocessing, but before feature generation, the dataset has <b>155 tweets</b> (rows)
+								and <b>25 features</b> (columns), and lastly <b>21 features</b> after anonymization.<br><br>
+								The 155 tweets collected come from <b>138 unique accounts.</b>
+								The tweets collected range from <b>January 2016</b> to <b>October 2022.</b></p>
+							</div>
+							<hr>
+							<div class="content">
+								<h2><b>Visualization</b></h2>
+								<h3><i>What plots did we use?</i></h3>
+								<p class="content">
+								Various <b>histograms</b> have been created from the dataset with various indices,
+								such as by month, by quarter, and by year. Additionally, a bar graph and
+								histogram were also created for the temporary bins discussed in the bins
+								sections.
+								</p>
+								<img src="images/graphs/histo_year.png" width="75%"/>
+								<img src="images/graphs/histo_quarter.png" width="100%"/>
+								<img src="images/graphs/histo_month.png" width="100%"/>
+								
+								<p class="content">
+								A <b>line graph</b> is useful for time-series analysis as trends between timestamps
+								are easier represented. A simple line graph was created through Python (where
+								points are connected through piecewise linear lines), and as needed, line graphs
+								of greater complexity (for example, through interpolation, as discussed previously),
+								can also be created. 
+								</p>
+								<img src="images/graphs/line_month.png" width="100%"/>
+
+								<h3><i>Can we use heat maps/swarm plots/violin plots?</i></h3>
+								<p>The above graphs cannot be created from our dataset as only one variable is relevant to the study, which is time posted.</p>
+							</div>
+							<hr>
+							<footer>
+								<h2><b>Supplementary Python Notebook</b></h2>
+								<p>Attached below is the Python Notebook we primarily used for exploring our data.</p>
+								<iframe src="data_exploration.html" frameborder="0" width="100%" height="750"></iframe>
+							</footer>
+						</section>
+
+						<!-- Modeling -->
+						<section id="modeling" class="main special">
+							<header class="major">
+								<h2>Modeling the Data</h2>
+								<p>Lorem ipsum your mom.</p>
+							</header>
+						</section>
+
+						<!-- Results -->
+						<section id="results" class="main special">
+							<header class="major">
+								<h2>Results & Discussion</h2>
+								<p>Lorem ipsum your mom.</p>
+							</header>
+						</section>
+
+						<!-- Conclusion -->
+						<section id="conclusion" class="main special">
+							<header class="major">
+								<h2>Conclusion</h2>
+								<p>Lorem ipsum your mom.</p>
+							</header>
+						</section>
+
+						<!-- Poster -->
+							<section id="poster" class="main special">
+								<header class="major">
+									<h2><b>Watch The Facts:</b> A Mini-Conference on Data Science and Disinformation in the Philippines</h2>
+									<p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
+									posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
+								</header>
+								
+								<div id="poster-container"></div>
+								<footer class="major">
+									<ul class="actions special">
+										<li><a href="generic.html" class="button primary">Get Started</a></li>
+										<li><a href="generic.html" class="button">Learn More</a></li>
+									</ul>
+								</footer>
+							</section>
+
 					</div>
-					<footer>
-						<ul id="copyright">
-							<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<h2>Aliquam sed mauris</h2>
+							<p>Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio.</p>
+							<ul class="actions">
+								<li><a href="generic.html" class="button">Learn More</a></li>
+							</ul>
+						</section>
+						<section>
+							<h2>Contact Us</h2>
+							<dl class="alt">
+								<dt>Acha Achapero</dt>
+								<dd>jcachapero@up.edu.ph</dd>
+								<dt>Anton Bolado</dt>
+								<dd>jsbolado@up.edu.ph</dd>
+								<dt>Luigi Torres</dt>
+								<dd>aptorres2@up.edu.ph</dd>
+							</dl>
+							<ul class="icons">
+								<li><a href="#" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
+								<li><a href="#" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
+								<li><a href="#" class="icon brands fa-dribbble alt"><span class="label">Dribbble</span></a></li>
+							</ul>
+						</section>
+						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
 					</footer>
-				</div>
-			</article>
+
+			</div>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
