@@ -295,12 +295,12 @@
 								<p class="content">
 								As we are comparing counts, the statistical test of choice is the <b>chi-square test for
 								homogeneity.</b> The chi-square test can compare the count of different populations and check
-								if they are homogeneous by comparing them to some expected frequency.
+								if they are homogeneous by comparing them to some expected frequency.<br><br>
 
 								In order for our data to fit the statistical test, the mis/disinformation tweets are binned
 								into three: before the event (January 2016 to July 2017), during the event (August 2017 to
 								October 2017), and after the event (November 2017 to December 2022), with the event being
-								Kian delos Santos’s death. 
+								Kian delos Santos’s death. <br><br>
 
 								As each bin has varying durations (the before, during, and after bins last 19, 3, and 62
 								months respectively), the expected frequency to be used in the test should be scaled accordingly.
@@ -323,11 +323,11 @@
 								<p class="content">
 								If the highest peak of mis/disinformation tweets is found during the event, then it is expected
 								that <b>the frequency of tweets during the event is significantly different compared to before and
-								after the event.</b>
+								after the event.</b><br><br>
 
 								As the chi-square test only gives information regarding the differences between classes and does
 								not specify which class is higher or lower, the same process as above can be applied for post-hoc
-								testing for each pair in the 3 bins to glean further information.
+								testing for each pair in the 3 bins to glean further information.<br><br>
 
 								The statistical tests are computed through <a href="https://scipy.org/" target="_blank"><b>SciPy</b></a>.
 								Note that SciPy has checks for various assumptions for the data (for example, having both the test
@@ -342,7 +342,7 @@
 								After calculating the number of mis/disinformation tweets per month, this can be graphed as a line
 								graph spanning from January 2016 to December 2022, as seen in the <a href="#exploration">data exploration</a>
 								portion above. Two methods will then be performed on this data to gain more insight about the nature of
-								the data: <b>peak detection</b> and <b>change-point detection.</b>
+								the data: <b>peak detection</b> and <b>change-point detection.</b><br><br>
 								
 								Peak detection is done using SciPy’s built-in peak detection function. This simply detects where in
 								the graph there are <i>significant peaks</i> which can then be associated with an event. Change-point detection
@@ -356,7 +356,7 @@
 								The above algorithms detected <b>8 peaks and 6 change-points,</b> all of which can be associated with some event below.
 								These real-life events aligning with peaks in the graph (as well as also aligning with some segments
 								of the Google Trends graph) help provide evidence that the model for mis/disinformation tweets is grounded
-								in reality.</p>
+								in reality.</p><br>
 								
 								<table class="alt">
 									<tr>
@@ -409,7 +409,7 @@
 								insufficient evidence to reject the hypothesis that there is no difference in the classes of tweets before the
 								event and during the event. In this sense, the frequency of the before bin is not significantly different from
 								the event bin, therefore it <b>cannot be concluded that Kian delos Santos’s death caused the highest peak in
-								mis/disinformation tweets.</b>
+								mis/disinformation tweets.</b><br>
 
 								This is supported by the machine learning graph, which shows while there exists a peak for Kian delos Santos’s
 								death, <b>the peak for the tweets before the event (particularly due to the elections) is higher.</b>
@@ -428,9 +428,9 @@
 
 								<h2><b>Possible Implications</b></h2>
 								<p class="content">
-								There are two main possible implications from the conclusion of this study, with regards to the correlation between Google Trends and the frequency of mis/disinformation tweets. Note that further research would need to be done to delve into either of these two working ideas.
+								There are two main possible implications from the conclusion of this study, with regards to the correlation between Google Trends and the frequency of mis/disinformation tweets. Note that further research would need to be done to delve into either of these two working ideas.<br><br>
 								
-								One possibility is that the relationship between Google Trends and the spread of mis/disinformation is not simply linear. It could be argued that people will spread more mis/disinformation in circumstances where there is more to gain. There might not be much to gain out of spreading mis/disinformation when someone is unjustly killed due to the war on drugs. However, there is a lot more to gain when doing the same during an election season, which could very well decide the presidency.
+								One possibility is that the relationship between Google Trends and the spread of mis/disinformation is not simply linear. It could be argued that people will spread more mis/disinformation in circumstances where there is more to gain. There might not be much to gain out of spreading mis/disinformation when someone is unjustly killed due to the war on drugs. However, there is a lot more to gain when doing the same during an election season, which could very well decide the presidency.<br><br>
 	
 								Another possibility has more to do with how Google Trends defines topics. Recall that the Google Trends graph mentioned earlier lists “war on drugs.” There may be a spike in interest due to Kian delos Santos’ death as this issue is directly related to said war on drugs. However, the discussion including war on drugs during the election season might not be considered as interest in “war on drugs” specifically, as people are likely also discussing Duterte's other planned projects and presidency as a whole. Google Trends may classify this as interest in “President Duterte,” rather than just “war on drugs.”
 								</p>
@@ -452,7 +452,8 @@
 
 								<h2><b>Watch The Facts:</b> A Mini-Conference on Data Science and Disinformation in the Philippines</h2>
 								<div id="poster-container"></div>
-
+								
+								<img src="images/VisualImpactAward.png" width="100%"/>
 								<img src="images/bucketboys2.jpg" width="100%"/>
 								<img src="images/bucketboys3.jpg" width="100%"/>
 							</section>
