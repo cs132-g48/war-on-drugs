@@ -183,7 +183,7 @@ input, select, textarea {
 
 		p.content {
 			-moz-columns: 20em 1;
-			-webkit-columns: 20em 2;
+			-webkit-columns: 20em 1;
 			-ms-columns: 20em 1;
 			columns: 20em 1;
 			-moz-column-gap: 2em;
